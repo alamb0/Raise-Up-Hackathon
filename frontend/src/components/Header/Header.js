@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 // import './Header.css';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../assets/icon.png'
@@ -7,8 +8,10 @@ function Header() {
     <>
         <Navbar>
             <Navbar.Brand>
-              <img src={logo} />
-              Volunteer Match Depot
+              <Link to="/" style={{color: 'black', textDecoration: 'none'}}>
+                <img src={logo} />
+                Volunteer Match Depot
+              </Link>
             </Navbar.Brand>
         </Navbar>
     </>

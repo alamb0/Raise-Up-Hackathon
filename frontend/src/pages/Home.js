@@ -6,6 +6,7 @@ import './Home.css'
 import Button from 'react-bootstrap/Button';
 import wave from '../assets/wavesNegative.svg'
 import waveFooter from '../assets/wavesPositive.svg'
+import Header from '../components/Header/Header';
 
 export default function Home() {
   const [events, setEvents] = useState([])
@@ -20,6 +21,7 @@ export default function Home() {
 
   return(
     <>
+    <Header />
     <div className="homepage-container">
       <div style={{padding: '20px'}}>
         <h1>Match with Organizations</h1>
