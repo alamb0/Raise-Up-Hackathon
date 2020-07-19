@@ -6,6 +6,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import Form from 'react-bootstrap/Form';
 import './Event.css'
 import htmlToImage from 'html-to-image';
+import Header from '../components/Header/Header';
 
 const FontColor = {
   White: 'white'
@@ -40,6 +41,7 @@ export default function Event() {
 
   return (
   <>
+  <Header />
   <div style={{display: 'flex'}}>
   <div>
   <h1>Event: </h1>

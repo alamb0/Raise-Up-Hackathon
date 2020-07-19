@@ -35,7 +35,7 @@ export default function Home() {
       </div>
     </div>
     <img className="homepage-wave" src={wave}/>
-    <h2 style={{padding: '20px'}}>Events</h2>
+    <h2 style={{padding: '20px', marginTop: '-20px'}}>Events</h2>
     <div className="homepage-events">
     {
       events && 
