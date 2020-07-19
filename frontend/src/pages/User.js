@@ -13,6 +13,7 @@ export default function User() {
      const res = await axios.get('/events')
      setEvents(res.data)
     }
+    document.title = 'Volunteer Match Depot - Profile'
     getEvents()
   }, [])
 

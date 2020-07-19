@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import imgTemplate from '../assets/demo-template.jpg'
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -18,6 +18,10 @@ export default function Event() {
   const [templateText, setTemplateText] = useState('Edit Text Here')
   const [downloadReady, setDownloadReady] = useState(false)
   const [fontColor, setFontColor] = useState(FontColor.White)
+
+  useEffect(() => {
+    document.title = 'Volunteer Match Depot - Event'
+  }, [])
 
   const handleTemplateText = e => {
     setTemplateText(e.target.value)
