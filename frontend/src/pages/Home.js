@@ -16,7 +16,11 @@ export default function Home() {
      const res = await axios.get('/events')
      setEvents(res.data)
     }
-    getEvents()
+    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+      getEvents()
+    } else {
+      //  call lambda
+    }
   }, [])
 
   return(
