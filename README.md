@@ -11,3 +11,10 @@ Run with `json-server --watch db.json` from `backend/mock-json-server` folder - 
 
 ## Architecture Diagram
 ![Architecture Diagram](architecture%20diagram.jpg?raw=true "Architecture Diagram")
+
+
+## Attribution
+https://www.shapedivider.app/
+https://unsplash.com/
+https://favicon.io/
+https://cssgradient.io/

@@ -11,9 +11,8 @@ function Event({event}) {
           <Card.Img variant="top" src={img} />
             <Card.Title>Event Name: {name}</Card.Title>
             <Card.Text> Description: {description}</Card.Text>
+            <Button>Learn More</Button>
         </Card.Body>
-        {/* TODO: add button to go to sign up/more details */}
-        <Button>Go</Button>
     </Card>
   );
 }
