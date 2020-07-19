@@ -1,0 +1,70 @@
+.template-container {
+    background-color: white;
+    position: relative;
+    text-align: center;
+    width: 700px;
+    height: 500px;
+}
+
+.template-text-white {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: dashed white 2px;
+    min-width: 500px;
+    min-height: 200px;
+}
+
+.text-white {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 500px;
+    min-height: 200px;
+}
+
+.template-text-yellow {
+    color: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: dashed white 2px;
+    min-width: 500px;
+    min-height: 200px;
+}
+
+.text-yellow {
+    color: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 500px;
+    min-height: 200px;
+}
+
+.template-text-black {
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: dashed white 2px;
+    min-width: 500px;
+    min-height: 200px;
+}
+
+.text-black {
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 500px;
+    min-height: 200px;
+}
