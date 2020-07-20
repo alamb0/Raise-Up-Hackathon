@@ -13,14 +13,19 @@ export default function Home() {
  
   useEffect(() => {
     const getEvents = async () => {
-     const res = await axios.get('/events')
-     setEvents(res.data)
+      if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+        const resDev = await axios.get('/events')
+        setEvents(resDev.data)
+      } else {
+        const res = await axios.get('https://i1wvgid8df.execute-api.us-east-1.amazonaws.com/dev/events', {
+          headers: {
+            'x-api-key': process.env.REACT_APP_AWS_API_KEY
+          }
+        })
+        setEvents(res.data)
+      }
     }
-    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-      getEvents()
-    } else {
-      //  call lambda
-    }
+    getEvents()
   }, [])
 
   return(
