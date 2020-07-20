@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
-import imgTemplate from '../assets/demo-template.jpg'
+import imgTemplate from '../assets/template-image3.jpg'
+import eventImage from '../assets/event1.jpg'
+// import imgTemplate from '../assets/demo-template.jpg'
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import Form from 'react-bootstrap/Form';
@@ -9,7 +11,12 @@ import htmlToImage from 'html-to-image';
 import Header from '../components/Header/Header';
 
 const FontColor = {
-  White: 'white'
+  White: 'white',
+  Black: 'black',
+  Blue: 'blue',
+  Yellow: 'yellow',
+  Green: 'green',
+  Red: 'red'
 }
 
 // TODO: Pull in event info and set and update image name
@@ -18,6 +25,7 @@ export default function Event() {
   const [templateText, setTemplateText] = useState('Edit Text Here')
   const [downloadReady, setDownloadReady] = useState(false)
   const [fontColor, setFontColor] = useState(FontColor.White)
+  const eventName = 'Test Event 1'
 
   useEffect(() => {
     document.title = 'Volunteer Match Depot - Event'
@@ -32,7 +40,7 @@ export default function Event() {
     htmlToImage.toJpeg(document.getElementById('template-img'), { quality: 0.95 })
       .then(function (dataUrl) {
         var link = document.createElement('a');
-        link.download = 'Event-Image.jpeg';
+        link.download = `${eventName} Image.jpeg`;
         link.href = dataUrl;
         link.click();
         setDownloadReady(false)
@@ -47,14 +55,19 @@ export default function Event() {
   <>
   <Header />
   <div style={{display: 'flex'}}>
-  <div>
-  <h1>Event: </h1>
-  <p>Description: </p>
-    {/* img */}
+  <div style={{flex: '50%', padding: '20px'}}>
+  <h1>Event: {eventName}</h1>
+  {/* <img src={eventImage} /> */}
+  <p>
+    <b>Description:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend ante vel leo iaculis, molestie accumsan lectus sodales. Donec ut consectetur nunc, at ornare erat. Aenean eleifend tellus et convallis convallis. Vivamus convallis, tortor eget feugiat fermentum, velit ante fringilla elit, et faucibus urna felis ac eros. Nulla nunc leo, tristique sit amet nibh in, dapibus porttitor nibh. Curabitur placerat, odio id auctor venenatis,
+  </p>
+    {/* TODO: add img */}
   <Button>Sign Up</Button>
   </div>
   <div>
+  <h2>Create and Share</h2>
     <div className="template-container" id="template-img">
+    {/* <h2>{eventName}</h2> */}
     <img src={imgTemplate} />
     <p className={downloadReady ? `text-${fontColor}` : `template-text-${fontColor}`}>{templateText}</p>
     </div>
@@ -70,19 +83,20 @@ export default function Event() {
       />
     </InputGroup>
 
-    <Form.Group controlId="exampleForm.ControlSelect1">
-    <Form.Label>Choose Font Color</Form.Label>
-    <Form.Control as="select" onChange={handleFontColor}>
-      <option value='white'>White</option>
-      <option value='black'>Black</option>
-      <option value='red'>Red</option>
-      <option value='yellow'>Yellow</option>
-      <option value='green'>Green</option>
-    </Form.Control>
-  </Form.Group>
+    <Form.Group controlId="fontColorSelect">
+      <Form.Label>Choose Font Color</Form.Label>
+      <Form.Control as="select" onChange={handleFontColor}>
+        <option value={FontColor.White}>White</option>
+        <option value={FontColor.Blue}>Blue</option>
+        <option value={FontColor.Black}>Black</option>
+        <option value={FontColor.Red}>Red</option>
+        <option value={FontColor.Yellow}>Yellow</option>
+        <option value={FontColor.Green}>Green</option>
+      </Form.Control>
+    </Form.Group>
     <Button onClick={handleImgSave}>Save</Button>
-    {/* Share button */}
-    <Button disabled>Share</Button>
+    {/* TODO: Share button */}
+    <Button disabled style={{marginLeft: '25px'}} variant="secondary">Share</Button>
   </div>
   </div>
   </>
