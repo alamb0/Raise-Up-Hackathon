@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import wave from '../assets/wavesNegative.svg'
 import waveFooter from '../assets/wavesPositive.svg'
 import Header from '../components/Header/Header';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   const [events, setEvents] = useState([])
@@ -37,7 +38,7 @@ export default function Home() {
         <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend ante vel leo iaculis, molestie accumsan lectus sodales. Donec ut consectetur nunc, at ornare erat. Aenean eleifend tellus et convallis convallis. Vivamus convallis, tortor eget feugiat fermentum, velit ante fringilla elit, et faucibus urna felis ac eros. Nulla nunc leo, tristique sit amet nibh in, dapibus porttitor nibh. Curabitur placerat, odio id auctor venenatis,
         </p>
-        <Button>Go</Button>
+        <Link to="/user"><Button>Go</Button></Link>
       </div>
       <div>
         <img src={homepageImage} style={{borderRadius: '2%', border: 'solid 2px white'}} />
