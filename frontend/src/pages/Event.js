@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
-import imgTemplate from '../assets/template-image3.jpg'
+// import imgTemplate from '../assets/template-image3.jpg'
 // import eventImage from '../assets/event1.jpg'
-// import imgTemplate from '../assets/demo-template.jpg'
+import imgTemplate from '../assets/demo-template.jpg'
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import Modal from 'react-bootstrap/Modal';

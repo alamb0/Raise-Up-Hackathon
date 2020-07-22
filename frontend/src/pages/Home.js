@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import Event from '../components/Event/Event';
-import homepageImage from '../assets/homepage-image.jpg'
+import homepageImage from '../assets/undraw_polaroid.png'
+// import homepageImage from '../assets/homepage-image.jpg'
 import './Home.css'
 import Button from 'react-bootstrap/Button';
 import wave from '../assets/wavesNegative.svg'
@@ -42,7 +43,7 @@ export default function Home() {
         <Link to="/user"><Button>Go</Button></Link>
       </div>
       <div style={{marginLeft: 'auto'}}>
-        <img src={homepageImage} style={{borderRadius: '2%', border: 'solid 2px white'}} />
+        <img src={homepageImage} style={{borderRadius: '2%', border: 'solid 2px white', height: '450px'}} />
       </div>
     </div>
     <img className="homepage-wave" src={wave}/>
