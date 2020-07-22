@@ -19,11 +19,20 @@ export default function User() {
 
   useEffect(() => {
     const getEvents = async () => {
-     const [resEvents, resOrgs] = await Promise.all([axios.get('/events'), axios.get('/organizations')]) 
-     setEvents(resEvents.data)
-     setOrganizations(resOrgs.data)
+      if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+        const [resEvents, resOrgs] = await Promise.all([axios.get('/events'), axios.get('/organizations')]) 
+        setEvents(resEvents.data)
+        setOrganizations(resOrgs.data)
+      } else {
+        const [resEvents, resOrgs] = await Promise.all([
+          axios.get('https://i1wvgid8df.execute-api.us-east-1.amazonaws.com/dev/events', {headers: {'x-api-key': process.env.REACT_APP_AWS_API_KEY}}), 
+          axios.get('https://i1wvgid8df.execute-api.us-east-1.amazonaws.com/dev/organizations', {headers: {'x-api-key': process.env.REACT_APP_AWS_API_KEY}})
+        ]) 
+        setEvents(resEvents.data)
+        setOrganizations(resOrgs.data)
+      }
     }
-    document.title = 'Volunteer Match Depot - Profile'
+    document.title = 'Volunteer Match Depot - Profile Home'
     getEvents()
   }, [])
 
