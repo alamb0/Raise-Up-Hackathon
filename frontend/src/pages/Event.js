@@ -32,7 +32,7 @@ export default function Event() {
   const eventName = 'Test Event 1'
 
   useEffect(() => {
-    document.title = 'Volunteer Match Depot - Event'
+    document.title = 'SharingCraft - Event'
   }, [])
 
   const handleTemplateText = e => {

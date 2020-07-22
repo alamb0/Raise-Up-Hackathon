@@ -32,7 +32,7 @@ export default function User() {
         setOrganizations(resOrgs.data)
       }
     }
-    document.title = 'Volunteer Match Depot - Profile Home'
+    document.title = 'SharingCraft - Profile Home'
     getEvents()
   }, [])
 
