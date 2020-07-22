@@ -4,7 +4,7 @@ var ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 
 exports.handler = async (event) => {
     // TODO implement
-    
+    // process.env.domain as cors header
     const response = {
         statusCode: 200,
         headers: {

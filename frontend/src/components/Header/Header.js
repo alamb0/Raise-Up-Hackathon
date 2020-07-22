@@ -10,7 +10,7 @@ function Header() {
             <Navbar.Brand>
               <Link to="/" style={{color: 'black', textDecoration: 'none'}}>
                 <img src={logo} />
-                Volunteer Match Depot
+                SharingCraft
               </Link>
             </Navbar.Brand>
         </Navbar>

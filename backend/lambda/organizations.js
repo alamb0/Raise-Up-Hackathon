@@ -11,7 +11,7 @@ exports.handler = async (event) => {
             'Access-Control-Allow-Origin': 'https://raiseup.austinlamb.com'
         },
         body: JSON.stringify([
-            {"id": 1, "name": "Test Org"}
+            {"id": 1, "name": "Test Org", "description": "description of organization 1", "location": "Test, AZ"}
         ]),
     };
     return response;

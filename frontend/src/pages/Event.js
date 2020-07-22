@@ -22,6 +22,7 @@ const FontColor = {
 }
 
 // TODO: Pull in event info and set and update image name
+// TODO: Replace inline styles with stylesheet
 
 export default function Event() { 
   const [templateText, setTemplateText] = useState('Edit Text')
@@ -69,11 +70,11 @@ export default function Event() {
   <div style={{display: 'flex'}}>
   <div style={{flex: '50%', padding: '20px'}}>
   <h1>Event: {eventName}</h1>
+  {/* TODO: add img */}
   {/* <img src={eventImage} /> */}
   <p>
     <b>Description:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend ante vel leo iaculis, molestie accumsan lectus sodales. Donec ut consectetur nunc, at ornare erat. Aenean eleifend tellus et convallis convallis. Vivamus convallis, tortor eget feugiat fermentum, velit ante fringilla elit, et faucibus urna felis ac eros. Nulla nunc leo, tristique sit amet nibh in, dapibus porttitor nibh. Curabitur placerat, odio id auctor venenatis,
   </p>
-    {/* TODO: add img */}
   <Button onClick={handleSignUp}>Sign Up</Button>
   </div>
   <div>

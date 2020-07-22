@@ -35,12 +35,13 @@ export default function Home() {
     <div className="homepage-container">
       <div style={{padding: '20px'}}>
         <h1>Match with Organizations</h1>
+        <h3>Find Organizations and get shareable content when volunteering</h3>
         <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend ante vel leo iaculis, molestie accumsan lectus sodales. Donec ut consectetur nunc, at ornare erat. Aenean eleifend tellus et convallis convallis. Vivamus convallis, tortor eget feugiat fermentum, velit ante fringilla elit, et faucibus urna felis ac eros. Nulla nunc leo, tristique sit amet nibh in, dapibus porttitor nibh. Curabitur placerat, odio id auctor venenatis,
+          {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend ante vel leo iaculis, molestie accumsan lectus sodales. Donec ut consectetur nunc, at ornare erat. Aenean eleifend tellus et convallis convallis. Vivamus convallis, tortor eget feugiat fermentum, velit ante fringilla elit, et faucibus urna felis ac eros. Nulla nunc leo, tristique sit amet nibh in, dapibus porttitor nibh. Curabitur placerat, odio id auctor venenatis, */}
         </p>
         <Link to="/user"><Button>Go</Button></Link>
       </div>
-      <div>
+      <div style={{marginLeft: 'auto'}}>
         <img src={homepageImage} style={{borderRadius: '2%', border: 'solid 2px white'}} />
       </div>
     </div>
