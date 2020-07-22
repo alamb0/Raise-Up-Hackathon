@@ -3,7 +3,7 @@
         {"id": 1, "firstName": "Test", "lastName": "Tester"}
     ],
     "organizations": [
-        {"id": 1, "name": "Test Org", "description": "description of organization 1", "location": "Test, AZ"}
+        {"id": 1, "name": "Test Organization", "description": "description of organization 1", "location": "Test, AZ"}
     ],
     "events": [
         {"id": 1, "name": "Test Event 1", "description": "description of event 1", "img": "https://source.unsplash.com/5wJ2GiYSifA/300x300"},
